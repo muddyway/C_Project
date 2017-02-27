@@ -1,0 +1,18 @@
+//将字符串中所有数字后置
+#include<stdio.h>
+int main()
+{char a[80]="ba3a5fsa6";
+ char t = '0',i=0,n=0;
+	while(a[n]!='\0')
+	{   n++;
+		if(a[n]>='0' && a[n]<='9')
+		{   t=a[n]; i=n;//n值不随i变而变化		
+       for(i;a[i]!='\0';i++)	
+			   {a[i]=a[i+1];}//全体字符后移1格			
+          a[i-1]=t;
+			   a[i]='\0';
+		}
+
+	}
+	printf("%s",a);
+}
